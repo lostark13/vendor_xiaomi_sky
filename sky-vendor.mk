@@ -12,6 +12,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sky/proprietary/system/etc/sysconfig/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml \
     vendor/xiaomi/sky/proprietary/system_ext/etc/dpm/dpm.conf:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/dpm/dpm.conf \
     vendor/xiaomi/sky/proprietary/system_ext/etc/init/dpmd.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/dpmd.rc \
+    vendor/xiaomi/sky/proprietary/system_ext/etc/init/vendor.qti.hardware.qccsyshal@1.2-service.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/vendor.qti.hardware.qccsyshal@1.2-service.rc \
     vendor/xiaomi/sky/proprietary/system_ext/etc/init/wfdservice.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/wfdservice.rc \
     vendor/xiaomi/sky/proprietary/system_ext/etc/permissions/com.qti.dpmframework.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.qti.dpmframework.xml \
     vendor/xiaomi/sky/proprietary/system_ext/etc/permissions/dpmapi.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/dpmapi.xml \
@@ -152,6 +153,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sky/proprietary/vendor/etc/init/hw/init.qti.kernel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.qti.kernel.rc \
     vendor/xiaomi/sky/proprietary/vendor/etc/init/ims_rtp_daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ims_rtp_daemon.rc \
     vendor/xiaomi/sky/proprietary/vendor/etc/init/imsdaemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/imsdaemon.rc \
+    vendor/xiaomi/sky/proprietary/vendor/etc/init/init.qdmastats.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qdmastats.rc \
     vendor/xiaomi/sky/proprietary/vendor/etc/init/init.qti.fm.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qti.fm.rc \
     vendor/xiaomi/sky/proprietary/vendor/etc/init/init.qti.media.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qti.media.rc \
     vendor/xiaomi/sky/proprietary/vendor/etc/init/init.qti.qcv.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qti.qcv.rc \
@@ -870,9 +872,9 @@ PRODUCT_PACKAGES += \
     libfastcvdsp_stub \
     libfastcvopt \
     libgame_enhance \
-    libgdtap \
     libgf_ca \
     libgf_hal \
+    libgnsspps \
     libgoodixhwfingerprint \
     libgralloc.qti \
     libgrpc++_unsecure_prebuilt \
@@ -889,7 +891,6 @@ PRODUCT_PACKAGES += \
     libizat_core \
     libjni_aidenoiserutilv2 \
     libjnigraphics_prebuilt \
-    libjnihelper \
     libjpege \
     libkaraokepal \
     libkeymasterdeviceutils \
@@ -981,6 +982,7 @@ PRODUCT_PACKAGES += \
     libqc2colorconvertfilter \
     libqc2filter \
     libqcbor \
+    libqcc_file_agent \
     libqcci_legacy \
     libqcmaputils \
     libqcodec2_base \
@@ -1026,6 +1028,7 @@ PRODUCT_PACKAGES += \
     libqmi_encdec \
     libqmi_legacy \
     libqmiservices \
+    libqppe \
     libqrtr \
     libqrtrclient \
     libqseed3 \
@@ -1077,6 +1080,7 @@ PRODUCT_PACKAGES += \
     libssd \
     libsubsystem_control \
     libswregistrationalgo \
+    libsynergy_loc_api \
     libsynx \
     libsys_info_cache \
     libsystem_health_mon \
@@ -1171,6 +1175,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.diaghal@1.0_vendor \
     vendor.qti.esepowermanager@1.0 \
     vendor.qti.esepowermanager@1.1 \
+    vendor.qti.gnss-V3-ndk \
     vendor.qti.gnss-V5-ndk \
     vendor.qti.gnss-service \
     vendor.qti.hardware.AGMIPC@1.0-impl \
@@ -1323,6 +1328,10 @@ PRODUCT_PACKAGES += \
     libmmparser_lite \
     libmmrtpdecoder \
     libmmrtpencoder \
+    libqcc \
+    libqcc_file_agent_sys \
+    libqccdme \
+    libqccfileservice \
     libwfdavenhancements \
     libwfdclient \
     libwfdcommonutils \
@@ -1346,10 +1355,16 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.dpmservice@1.0 \
     vendor.qti.hardware.dpmservice@1.1 \
     vendor.qti.hardware.fm@1.0 \
+    vendor.qti.hardware.qccsyshal@1.0 \
+    vendor.qti.hardware.qccsyshal@1.1 \
+    vendor.qti.hardware.qccsyshal@1.2-halimpl \
+    vendor.qti.hardware.qccsyshal@1.2 \
+    vendor.qti.hardware.qccvndhal@1.0 \
     vendor.qti.hardware.seccam@1.0 \
     vendor.qti.hardware.wifidisplaysession@1.0 \
     vendor.qti.imsrtpservice@3.0 \
     vendor.qti.imsrtpservice@3.1 \
+    vendor.qti.qccvndhal_aidl-V1-ndk \
     CACertService \
     CneApp \
     IWlanService \
@@ -1359,6 +1374,7 @@ PRODUCT_PACKAGES += \
     uimgbaservice \
     ImsRcsService \
     PowerOffAlarm \
+    QCC \
     QtiTelephony \
     QtiTelephonyService \
     WfdService \
@@ -1465,6 +1481,7 @@ PRODUCT_PACKAGES += \
     port-bridge \
     power_off_alarm \
     ppd \
+    qcc-trd \
     qcom-system-daemon \
     qdcmss \
     qmi_test_mt_client_init_instance \
@@ -1480,7 +1497,6 @@ PRODUCT_PACKAGES += \
     rmt_storage \
     sensors.qti \
     shsusrd \
-    slim_daemon \
     sscrpcd \
     ssgqmigd \
     ssgtzd \
@@ -1499,8 +1515,8 @@ PRODUCT_PACKAGES += \
     wfdvndservice \
     wifidisplayhalservice \
     xtra-daemon \
-    xtwifi-client \
     dpmd \
+    qccsyshal@1.2-service \
     wfdservice64
 
 PRODUCT_PACKAGES += \
