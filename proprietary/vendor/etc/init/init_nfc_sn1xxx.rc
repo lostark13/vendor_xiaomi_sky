@@ -34,7 +34,6 @@ on early-init && property:ro.product.model=A401XM
 on early-init && property:ro.product.device=river
     setprop persist.vendor.nfc.factory.fwstatus unknown
     setprop ro.vendor.nfc.repair 1
-    setprop ro.vendor.nfc.wallet_fusion 1
     setprop ro.vendor.nfc.dispatch_optim 1
 
 on early-init && property:ro.product.device=XIG03
