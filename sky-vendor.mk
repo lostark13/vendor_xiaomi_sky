@@ -46,7 +46,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sky/proprietary/vendor/etc/acdbdata/ravelin_qrd_cust_jp/QRD_ravelin_jp_acdb_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/ravelin_qrd_cust_jp/QRD_ravelin_jp_acdb_cal.acdb \
     vendor/xiaomi/sky/proprietary/vendor/etc/acdbdata/ravelin_qrd_cust_jp/QRD_ravelin_jp_workspaceFileXml.qwsp:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/ravelin_qrd_cust_jp/QRD_ravelin_jp_workspaceFileXml.qwsp \
     vendor/xiaomi/sky/proprietary/vendor/etc/audio/sku_ravelin/audio_effects.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_ravelin/audio_effects.conf \
-    vendor/xiaomi/sky/proprietary/vendor/etc/audio/sku_ravelin/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_ravelin/audio_effects.xml \
     vendor/xiaomi/sky/proprietary/vendor/etc/audio/sku_ravelin/mixer_paths_ravelin_idp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_ravelin/mixer_paths_ravelin_idp.xml \
     vendor/xiaomi/sky/proprietary/vendor/etc/audio/sku_ravelin/mixer_paths_ravelin_qrd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_ravelin/mixer_paths_ravelin_qrd.xml \
     vendor/xiaomi/sky/proprietary/vendor/etc/audio/sku_ravelin/resourcemanager_ravelin_idp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_ravelin/resourcemanager_ravelin_idp.xml \
@@ -1086,6 +1085,7 @@ PRODUCT_PACKAGES += \
     libsystem_health_mon \
     libtestutils \
     libtfestriping \
+    libthermalclient \
     libthreadutils \
     libtime_genoff \
     libtinyxml2_1 \
@@ -1163,7 +1163,6 @@ PRODUCT_PACKAGES += \
     vendor.libdpmframework \
     vendor.libdpmtcm \
     vendor.libmwqemiptablemgr \
-    vendor.nxp.hardware.nfc@2.0 \
     vendor.qti.data.factory@2.0 \
     vendor.qti.data.factory@2.1 \
     vendor.qti.data.factory@2.2 \
