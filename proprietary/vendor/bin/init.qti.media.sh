@@ -57,11 +57,11 @@ case "$target" in
         esac
         ;;
     "parrot")
-        setprop vendor.mm.target.enable.qcom_parser 1024079
+        setprop vendor.mm.target.enable.qcom_parser 958543
         case "$soc_hwid" in
             568|602|581|582)
                 setprop vendor.media.target_variant "_ravelin"
-                if [ $build_codename -le "14" ]; then
+                if [ $build_codename -le "15" ]; then
                     setprop vendor.netflix.bsp_rev "Q4450-37037-1"
                 fi
                 ;;

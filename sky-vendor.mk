@@ -569,6 +569,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sky/proprietary/vendor/lib64/camera/fdconfigvideolite.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/fdconfigvideolite.bin
 
 PRODUCT_PACKAGES += \
+    vendor.qti.diaghal-V1-ndk \
+    vendor.qti.hardware.fm-V1-ndk \
     eglSubDriverAndroid \
     libEGL_adreno \
     libGLESv1_CM_adreno \
@@ -1361,6 +1363,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.qccvndhal@1.0 \
     vendor.qti.hardware.seccam@1.0 \
     vendor.qti.hardware.wifidisplaysession@1.0 \
+    vendor.qti.hardware.wifidisplaysession_aidl-V1-ndk \
     vendor.qti.imsrtpservice@3.0 \
     vendor.qti.imsrtpservice@3.1 \
     vendor.qti.qccvndhal_aidl-V1-ndk \
@@ -1374,8 +1377,8 @@ PRODUCT_PACKAGES += \
     ImsRcsService \
     PowerOffAlarm \
     QCC \
-    QtiTelephony \
     QtiTelephonyService \
+    QtiTelephony \
     WfdService \
     dpmserviceapp \
     ims \
