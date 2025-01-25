@@ -11629,8 +11629,6 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib64/libjnigraphics_prebuilt.so",
             ],
-            shared_libs: [
-            ],
         },
     },
     compile_multilib: "64",
@@ -16957,8 +16955,6 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib64/libsn100u_fw.so",
             ],
-            shared_libs: [
-            ],
         },
     },
     compile_multilib: "64",
@@ -16976,8 +16972,6 @@ cc_prebuilt_library_shared {
         android_arm64: {
             srcs: [
                 "proprietary/vendor/lib64/libsn100u_fw_cn.so",
-            ],
-            shared_libs: [
             ],
         },
     },
@@ -16997,8 +16991,6 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib64/libsn100u_fw_jp.so",
             ],
-            shared_libs: [
-            ],
         },
     },
     compile_multilib: "64",
@@ -17016,8 +17008,6 @@ cc_prebuilt_library_shared {
         android_arm64: {
             srcs: [
                 "proprietary/vendor/lib64/libsn220u_fw.so",
-            ],
-            shared_libs: [
             ],
         },
     },
@@ -25022,7 +25012,7 @@ cc_prebuilt_library_shared {
                 "libaudioclient",
                 "libaudiofoundation",
                 "audioclient-types-aidl-cpp",
-                "android.media.audio.common.types-V3-cpp",
+                "android.media.audio.common.types-V4-cpp",
                 "libwfdmmsrc_system",
                 "libwfdavenhancements",
                 "libhidlbase",
