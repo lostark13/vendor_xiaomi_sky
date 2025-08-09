@@ -8381,33 +8381,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libadm",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libadm.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libtinyalsa",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libadsp_default_listener",
     owner: "xiaomi",
     strip: {
@@ -8743,34 +8716,6 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libmpbase",
                 "liblog",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libaudio_log_utils",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libaudio_log_utils.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "libexpat",
-                "liblog",
-                "libc++",
                 "libc",
                 "libm",
                 "libdl",
@@ -9611,84 +9556,6 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libsync",
                 "libz",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libcapiv2svacnnvendor",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libcapiv2svacnnvendor.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libcapiv2svarnnvendor",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libcapiv2svarnnvendor.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libcapiv2uvvendor",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libcapiv2uvvendor.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
                 "libc++",
                 "libc",
                 "libm",
@@ -10883,6 +10750,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libgrpc++_unsecure_prebuilt.so",
             ],
             shared_libs: [
+                "libz",
                 "liblog",
                 "libc++",
                 "libc",
@@ -11310,6 +11178,35 @@ cc_prebuilt_library_shared {
         android_arm64: {
             srcs: [
                 "proprietary/vendor/lib64/libjnigraphics_prebuilt.so",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libjnihelper",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libjnihelper.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libqmiservices",
+                "libqmi_cci",
+                "libcacertclient",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
             ],
         },
     },
@@ -12003,35 +11900,6 @@ cc_prebuilt_library_shared {
                 "vendor.qti.hardware.mwqemadapter@1.0",
                 "libcutils",
                 "libidl",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    check_elf_files: false,
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libmcs",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libmcs.so",
-            ],
-            shared_libs: [
-                "libaudioroute",
-                "liblog",
-                "libcutils",
-                "libtinyalsa",
                 "libc++",
                 "libc",
                 "libm",
@@ -14924,7 +14792,6 @@ cc_prebuilt_library_shared {
                 "libQtiRilLoadable",
                 "libril-legacy",
                 "libc++",
-                "libclang_rt.ubsan_standalone",
                 "libc",
                 "libm",
                 "libdl",
@@ -15758,33 +15625,6 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqtigefar",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqtigefar.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -24308,7 +24148,6 @@ cc_prebuilt_library_shared {
                 "proprietary/system_ext/lib64/libwfdservice.so",
             ],
             shared_libs: [
-                "libaudioclient_shim",
                 "liblog",
                 "libutils",
                 "libcutils",
@@ -25142,6 +24981,9 @@ android_app_import {
     name: "QtiTelephony",
     owner: "xiaomi",
     apk: "proprietary/system_ext/priv-app/QtiTelephony/QtiTelephony.apk",
+    required: [
+        "QtiTelephonyCompat",
+    ],
     certificate: "platform",
     dex_preopt: {
         enabled: false,
@@ -25178,6 +25020,9 @@ android_app_import {
     name: "ims",
     owner: "xiaomi",
     apk: "proprietary/system_ext/priv-app/ims/ims.apk",
+    required: [
+        "QtiTelephonyCompat",
+    ],
     certificate: "platform",
     dex_preopt: {
         enabled: false,
@@ -28383,4 +28228,37 @@ install_symlink {
     soc_specific: true,
     installed_location: "lib64/libq3dtools_adreno.so",
     symlink_target: "/vendor/lib64/egl/libq3dtools_adreno.so",
+}
+
+filegroup {
+    name: "proprietary_rildb_config_sql_files",
+    srcs: [
+        "proprietary/vendor/etc/qcril_database/upgrade/config/10.0_config.sql",
+        "proprietary/vendor/etc/qcril_database/upgrade/config/11.0_config.sql",
+        "proprietary/vendor/etc/qcril_database/upgrade/config/12.0_config.sql",
+        "proprietary/vendor/etc/qcril_database/upgrade/config/13.0_config.sql",
+        "proprietary/vendor/etc/qcril_database/upgrade/config/6.0_config.sql",
+        "proprietary/vendor/etc/qcril_database/upgrade/config/7.0_config.sql",
+        "proprietary/vendor/etc/qcril_database/upgrade/config/8.0_config.sql",
+        "proprietary/vendor/etc/qcril_database/upgrade/config/9.0_config.sql",
+    ],
+}
+
+filegroup {
+    name: "proprietary_rildb_other_sql_files",
+    srcs: [
+        "proprietary/vendor/etc/qcril_database/upgrade/other/0_initial_qcrilnr.sql",
+        "proprietary/vendor/etc/qcril_database/upgrade/other/10_version_update_ecc_table.sql",
+        "proprietary/vendor/etc/qcril_database/upgrade/other/11_version_update_ecc_table.sql",
+        "proprietary/vendor/etc/qcril_database/upgrade/other/12_version_update_ecc_table.sql",
+        "proprietary/vendor/etc/qcril_database/upgrade/other/1_version_intro_qcrilnr.sql",
+        "proprietary/vendor/etc/qcril_database/upgrade/other/2_version_add_wps_config_qcrilnr.sql",
+        "proprietary/vendor/etc/qcril_database/upgrade/other/3_version_update_wps_config_qcrilnr.sql",
+        "proprietary/vendor/etc/qcril_database/upgrade/other/4_version_update_ecc_table_qcrilnr.sql",
+        "proprietary/vendor/etc/qcril_database/upgrade/other/5_version_update_ecc_table_qcrilnr.sql",
+        "proprietary/vendor/etc/qcril_database/upgrade/other/6_version_change_property_table_qcrilnr.sql",
+        "proprietary/vendor/etc/qcril_database/upgrade/other/7_version_update_ecc_table_qcrilnr.sql",
+        "proprietary/vendor/etc/qcril_database/upgrade/other/8_version_update_ecc_table.sql",
+        "proprietary/vendor/etc/qcril_database/upgrade/other/9_version_update_ecc_table.sql",
+    ],
 }
