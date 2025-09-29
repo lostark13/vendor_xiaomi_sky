@@ -24030,7 +24030,6 @@ cc_prebuilt_library_shared {
                 "proprietary/system_ext/lib64/libwfdmmsrc_system.so",
             ],
             shared_libs: [
-                "libgui_shim",
                 "libbinder",
                 "libmmosal",
                 "liblog",
@@ -24077,7 +24076,6 @@ cc_prebuilt_library_shared {
                 "proprietary/system_ext/lib64/libwfdnative.so",
             ],
             shared_libs: [
-                "libinput_shim",
                 "libandroid_runtime",
                 "libui",
                 "libinput",
@@ -24170,7 +24168,6 @@ cc_prebuilt_library_shared {
                 "vendor.qti.hardware.wifidisplaysession@1.0",
                 "vendor.qti.hardware.wifidisplaysession_aidl-V1-ndk",
                 "libbinder_ndk",
-                "android.hardware.common-V2-ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -24268,6 +24265,8 @@ cc_prebuilt_library_shared {
                 "libmmosal",
                 "libutils",
                 "liblog",
+                "libcutils",
+                "libwfdconfigutils",
                 "libc++",
                 "libc",
                 "libm",
@@ -28186,6 +28185,13 @@ install_symlink {
     system_ext_specific: true,
     installed_location: "priv-app/ims/lib/arm64/libimsmedia_jni.so",
     symlink_target: "/system_ext/lib64/libimsmedia_jni.so",
+}
+
+install_symlink {
+    name: "system_ext_priv-app_WfdService_lib_arm64_libwfdnative_so",
+    system_ext_specific: true,
+    installed_location: "priv-app/WfdService/lib/arm64/libwfdnative.so",
+    symlink_target: "/system_ext/lib64/libwfdnative.so",
 }
 
 install_symlink {
