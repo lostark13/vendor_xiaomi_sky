@@ -4124,7 +4124,7 @@ cc_prebuilt_library_shared {
                 "camx.device@3.3-impl",
                 "libjpeg",
                 "libsync",
-                "libtinyxml2",
+                "libtinyxml2-v34",
                 "libutils",
                 "libyuv",
                 "android.hardware.graphics.mapper@2.0",
@@ -4215,7 +4215,7 @@ cc_prebuilt_library_shared {
                 "libjpeg",
                 "liblog",
                 "libsync",
-                "libtinyxml2",
+                "libtinyxml2-v34",
                 "libutils",
                 "libyuv",
                 "android.hardware.graphics.mapper@2.0",
@@ -4309,7 +4309,7 @@ cc_prebuilt_library_shared {
                 "libjpeg",
                 "liblog",
                 "libsync",
-                "libtinyxml2",
+                "libtinyxml2-v34",
                 "libutils",
                 "libyuv",
                 "android.hardware.graphics.mapper@2.0",
@@ -4459,7 +4459,7 @@ cc_prebuilt_library_shared {
                 "camx.device@3.4-impl",
                 "camx.device@3.5-impl",
                 "camx.device@3.6-impl",
-                "libtinyxml2",
+                "libtinyxml2-v34",
                 "android.hardware.graphics.mapper@2.0",
                 "android.hardware.graphics.mapper@3.0",
                 "android.hardware.graphics.mapper@4.0",
@@ -4515,7 +4515,7 @@ cc_prebuilt_library_shared {
                 "camx.device@3.4-impl",
                 "camx.device@3.5-impl",
                 "camx.device@3.6-impl",
-                "libtinyxml2",
+                "libtinyxml2-v34",
                 "android.hardware.graphics.mapper@2.0",
                 "android.hardware.graphics.mapper@3.0",
                 "android.hardware.graphics.mapper@4.0",
@@ -4569,7 +4569,7 @@ cc_prebuilt_library_shared {
                 "camx.device@3.4-impl",
                 "camx.device@3.5-impl",
                 "camx.device@3.6-impl",
-                "libtinyxml2",
+                "libtinyxml2-v34",
                 "android.hardware.graphics.mapper@2.0",
                 "android.hardware.graphics.mapper@3.0",
                 "android.hardware.graphics.mapper@4.0",
@@ -4629,7 +4629,7 @@ cc_prebuilt_library_shared {
                 "camx.device@3.4-impl",
                 "camx.device@3.5-impl",
                 "camx.device@3.6-impl",
-                "libtinyxml2",
+                "libtinyxml2-v34",
                 "android.hardware.graphics.mapper@2.0",
                 "android.hardware.graphics.mapper@3.0",
                 "android.hardware.graphics.mapper@4.0",
@@ -4685,7 +4685,7 @@ cc_prebuilt_library_shared {
                 "camx.device@3.4-impl",
                 "camx.device@3.5-impl",
                 "camx.device@3.6-impl",
-                "libtinyxml2",
+                "libtinyxml2-v34",
                 "android.hardware.graphics.mapper@2.0",
                 "android.hardware.graphics.mapper@3.0",
                 "android.hardware.graphics.mapper@4.0",
@@ -4743,7 +4743,7 @@ cc_prebuilt_library_shared {
                 "camx.device@3.4-impl",
                 "camx.device@3.5-impl",
                 "camx.device@3.6-impl",
-                "libtinyxml2",
+                "libtinyxml2-v34",
                 "android.hardware.graphics.mapper@2.0",
                 "android.hardware.graphics.mapper@3.0",
                 "android.hardware.graphics.mapper@4.0",
@@ -4803,7 +4803,7 @@ cc_prebuilt_library_shared {
                 "camx.device@3.4-impl",
                 "camx.device@3.5-impl",
                 "camx.device@3.6-impl",
-                "libtinyxml2",
+                "libtinyxml2-v34",
                 "android.hardware.graphics.mapper@2.0",
                 "android.hardware.graphics.mapper@3.0",
                 "android.hardware.graphics.mapper@4.0",
@@ -8420,6 +8420,33 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libadm",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libadm.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libtinyalsa",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libadsp_default_listener",
     owner: "xiaomi",
     strip: {
@@ -8755,6 +8782,34 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libmpbase",
                 "liblog",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libaudio_log_utils",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libaudio_log_utils.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "libcutils",
+                "libexpat",
+                "liblog",
+                "libc++",
                 "libc",
                 "libm",
                 "libdl",
@@ -9608,6 +9663,84 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libcapiv2svacnnvendor",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libcapiv2svacnnvendor.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcapiv2svarnnvendor",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libcapiv2svarnnvendor.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcapiv2uvvendor",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libcapiv2uvvendor.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libcdfw",
     owner: "xiaomi",
     strip: {
@@ -10339,7 +10472,7 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libbinder",
                 "libdrm",
-                "libtinyxml2",
+                "libtinyxml2-v34",
                 "libdisplaydebug",
                 "libhidlbase",
                 "android.frameworks.sensorservice@1.0",
@@ -11945,6 +12078,35 @@ cc_prebuilt_library_shared {
                 "vendor.qti.hardware.mwqemadapter@1.0",
                 "libcutils",
                 "libidl",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmcs",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libmcs.so",
+            ],
+            shared_libs: [
+                "libaudioroute",
+                "liblog",
+                "libcutils",
+                "libtinyalsa",
                 "libc++",
                 "libc",
                 "libm",
@@ -15675,6 +15837,33 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libqtigefar",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libqtigefar.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libqtikeymaster4",
     owner: "xiaomi",
     strip: {
@@ -16493,7 +16682,7 @@ cc_prebuilt_library_shared {
                 "libdisplaydebug",
                 "libsdm-color",
                 "libbinder",
-                "libtinyxml2",
+                "libtinyxml2-v34",
                 "libsdmutils",
                 "libdrm",
                 "libdigital-dimming",
@@ -26027,7 +26216,7 @@ cc_prebuilt_binary {
                 "camx.device@3.4-impl",
                 "camx.device@3.5-impl",
                 "camx.device@3.6-impl",
-                "libtinyxml2",
+                "libtinyxml2-v34",
                 "android.hardware.graphics.mapper@2.0",
                 "android.hardware.graphics.mapper@3.0",
                 "android.hardware.graphics.mapper@4.0",
