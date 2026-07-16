@@ -710,7 +710,6 @@ PRODUCT_PACKAGES += \
     camera.qcom \
     com.dsi.ant@1.0-impl \
     com.qti.chi.override \
-    consumerir.default \
     fingerprint.fpc.default \
     fingerprint.goodix.default \
     vendor.qti.esepowermanager@1.1-impl \
@@ -887,6 +886,7 @@ PRODUCT_PACKAGES += \
     libminksocket_vendor \
     libmiphone_capture_bokeh \
     libmiphone_preview_bokeh \
+    libmisight \
     libmlipay \
     libmlipay@1.1 \
     libmm-hdcpmgr \
